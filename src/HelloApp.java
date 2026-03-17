@@ -2,16 +2,16 @@ public class HelloApp {
 
     public static void main(String[] args) {
 
-        // Check if command-line argument exists
-        String name;
+        String message;
 
         if (args.length > 0) {
-            name = args[0];   // use the provided name
+            // Join all names with comma
+            String names = String.join(", ", args);
+            message = "Hello, " + names + "!";
         } else {
-            name = "World";   // default value
+            message = "Hello, World!";
         }
 
-        // Display greeting
-        System.out.println("Hello, " + name + "!");
+        System.out.println(message);
     }
 }
